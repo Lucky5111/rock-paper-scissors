@@ -1,39 +1,17 @@
-/*
-*/
-/* ROCK PAPER SCISSORS
-*/
-/* Ver.1
-*/
 
+const choices = ["ROCK", "PAPER", "SCISSORS"];
 
+var randomChoice = Math.floor(Math.random() * choices.length)
+console.log(randomChoice)
+var  computerSelection = choices.splice(randomChoice)
+console.log(String(computerSelection));
 
-function game(){
-
-/* variables*/
-
-let userScore = 0;
-let computerScore = 0;
-
-
-
-if (userScore || computerScore < 5){
 
 function computerPlay (){
-
-} 
-
-function playRound(playerSelection, computerSelection){
-
+    var computerSelection = Math.floor(Math.random() * choices.length)
+    console.log(computerSelection);
 }
 
-} else {
-    if (computerScore == 5) {
-        console.log("I win")
-    }
-    if (userScore == 5) {
-        console.log("You won!")
-    }
-}
-
+function game(){
 
 }
