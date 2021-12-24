@@ -1,17 +1,71 @@
+//Needed things
 
-const choices = ["ROCK", "PAPER", "SCISSORS"];
+    //array choices
 
-var randomChoice = Math.floor(Math.random() * choices.length)
-console.log(randomChoice)
-var  computerSelection = choices.splice(randomChoice)
-console.log(String(computerSelection));
+    const choices = ["ROCK", "PAPER", "SCISSORS"];
 
+
+
+
+//PROMPT
+
+let playerSelection_unsanitized = prompt("Choice")
+
+let playerSelection = playerSelection_unsanitized.toUpperCase();
+
+console.log(playerSelection);
+
+//Computer Choice
 
 function computerPlay (){
-    var computerSelection = Math.floor(Math.random() * choices.length)
-    console.log(computerSelection);
+
+
+    //Random array pos
+
+    var randomChoice = Math.floor(Math.random() * choices.length)
+    console.log(randomChoice)
+
+    //Computer selection
+
+    var tempChoice = choices.slice(randomChoice, randomChoice + 1);
+
+    console.log(String(tempChoice));
+
+    //
+    return String(tempChoice);
 }
 
-function game(){
+var computerSelection = computerPlay();
+
+console.log(computerSelection);
+
+function playRound(playerSelection, computerSelection) {
+
+    if(playerSelection == computerSelection) {
+        return "TIE";
+    }
+
+    if(playerSelection == "ROCK", computerSelection == "PAPER"){
+        return "I win!";
+    }
+}
+
+
+
+//Later use
+function game(playerSelection, computerSelection){
+
+    function playRound(playerSelection, computerSelection) {
+
+        if(playerSelection == computerSelection) {
+            return "TIE";
+        }
+
+        if(playerSelection == "ROCK", computerSelection == "PAPER"){
+            return "I win!";
+        }
+
+
+    }
 
 }
