@@ -3,21 +3,21 @@
     //array choices
 
     const choices = ["ROCK", "PAPER", "SCISSORS"];
-
+    
 
 
 
 //PROMPT
 
-let playerSelection_unsanitized = prompt("Choice")
+/*let playerSelection_unsanitized = prompt("Choice")
 
 let playerSelection = playerSelection_unsanitized.toUpperCase();
 
-console.log(playerSelection);
+console.log(playerSelection);*/
 
 //Computer Choice
 
-function computerPlay (){
+/*function computerPlay (){
 
 
     //Random array pos
@@ -34,19 +34,27 @@ function computerPlay (){
     //
     return String(tempChoice);
 }
+*/
 
-var computerSelection = computerPlay();
+
+// HARD CODED
+let playerSelection = "ROCK";
+let computerSelection = "ROCK";
+
+//var computerSelection = computerPlay();
 
 console.log(computerSelection);
 
 function playRound(playerSelection, computerSelection) {
 
     if(playerSelection == computerSelection) {
-        return "TIE";
+        console.log("TIE");
     }
+    else if (playerSelection == ) {
+        console.log("false");
+    }
+    else if () {
 
-    if(playerSelection == "ROCK", computerSelection == "PAPER"){
-        return "I win!";
     }
 }
 
@@ -69,3 +77,5 @@ function game(playerSelection, computerSelection){
     }
 
 }
+
+console.log(playRound(playerSelection, computerSelection));
