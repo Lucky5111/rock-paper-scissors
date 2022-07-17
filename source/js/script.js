@@ -1,25 +1,25 @@
 //Needed things
 
     //array choices
-
+console.log("starting...");
     const choices = ["ROCK", "PAPER", "SCISSORS"];
     
 
 
 
-//PROMPT
+function playerPrompt (choices){
 
-/*let playerSelection_unsanitized = prompt("Choice")
+let playerSelection_unsanitized = prompt("Choice")
 
 let playerSelection = playerSelection_unsanitized.toUpperCase();
 
-console.log(playerSelection);*/
-
+return playerSelection;
+}
 //Computer Choice
 
 
 
-function computerPlay (){
+function computerPlay (choices){
 
 
     //Random array pos
@@ -31,11 +31,11 @@ function computerPlay (){
 
     var tempChoice = choices.slice(randomChoice, randomChoice + 1);
 
-    console.log(String(tempChoice));
+    let result = String(tempChoice);
 
-    //
-    return String(tempChoice);
-}
+    return result;
+
+    }
 
 
 
@@ -55,20 +55,17 @@ let round = 0;
 
 console.log("a");
 
-function game(round){
-    console.log("a2");
-    function playRound(round) {
+function game(round, playerScore, computerScore, computerPlay, playerPrompt, choices){
+console.log("a2");
+    
+    function playRound(round, playerScore, computerScore, computerPlay, playerPrompt, choices) {
 
-        //NEW SELECTION
-        let computerSelection = computerPlay();
-        //NEW SELECTION
-        let playerSelection_unsanitized = prompt("Choice");
-        
-        let playerSelection = playerSelection_unsanitized.toUpperCase();
-
-        //TIE
+        let playerSelection = playerPrompt(choices);
+        let computerSelection = computerPlay(choices);
+        /*//TIE
         if(playerSelection == computerSelection) {
             console.log("TIE");
+    
         }
 
         //WIN
@@ -100,16 +97,14 @@ function game(round){
         }
         
         round ++;
-
+        
         console.log("round: " + round);
-    } 
-    for(;round < 6;){
-    console.log(playRound);
-    
 
-    }
+        */
+        return computerSelection;
+    } 
+    //for(;round < 6;)
+    return playRound(round, playerScore, computerScore, computerPlay, playerPrompt, choices);    
 }
 
-
-
-console.log(game(round));
+console.log(game(round, playerScore, computerScore, computerPlay, playerPrompt, choices));
